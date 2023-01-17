@@ -37,12 +37,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HelloComponent,
-    PageComponent,
-    BackupOptionsComponent,
-  ],
+  declarations: [AppComponent, PageComponent, BackupOptionsComponent],
   imports: [
     BrowserModule,
     FormsModule,
