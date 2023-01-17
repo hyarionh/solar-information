@@ -1,4 +1,5 @@
-[menu here]
-<span *ngFor="let path of paths">{{ path }}</span>
+<div class="menu">
+  <a *ngFor="let path of paths" [routerLink]="path.url">{{ path.name }}</a>
+</div>
 
 <router-outlet></router-outlet>

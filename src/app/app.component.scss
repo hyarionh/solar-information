@@ -1,0 +1,16 @@
+p {
+  font-family: Lato;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+}
+.menu a {
+  padding: 8px;
+  background: #eee;
+
+  &:hover {
+    background: #ccc;
+  }
+}
