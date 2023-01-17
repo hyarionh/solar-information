@@ -8,6 +8,8 @@ import { PageComponent } from './page/page.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { MarkdownModule } from 'ngx-markdown';
+import { DataService } from './data.service';
+import { BackupOptionsComponent } from './page/backup-options.component';
 
 export const mdfiles = [
   'backup-options',
@@ -35,6 +37,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    PageComponent,
+    BackupOptionsComponent,
+  ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -42,7 +50,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     MarkdownModule.forRoot({ loader: HttpClient }),
   ],
-  declarations: [AppComponent, HelloComponent, PageComponent],
+
   bootstrap: [AppComponent],
+  providers: [DataService],
 })
 export class AppModule {}
