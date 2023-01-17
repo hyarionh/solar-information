@@ -9,11 +9,23 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { MarkdownModule } from 'ngx-markdown';
 
+export const mdfiles = ['batteries', 'inverters', 'solarpanels', 'finance'];
+
 const routes: Routes = [
   {
     path: '',
     component: PageComponent,
+    data: {
+      file: 'index',
+    },
   },
+  ...mdfiles.map((f) => ({
+    path: f,
+    component: PageComponent,
+    data: {
+      file: f,
+    },
+  })),
 ];
 
 @NgModule({
