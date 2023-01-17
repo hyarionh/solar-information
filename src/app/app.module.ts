@@ -26,6 +26,13 @@ const routes: Routes = [
       file: 'home',
     },
   },
+  // {
+  //   path: 'backup-options',
+  //   component: BackupOptionsComponent,
+  //   data: {
+  //     file: 'home',
+  //   },
+  // },
   ...mdfiles.map((f) => ({
     path: f,
     component: PageComponent,
