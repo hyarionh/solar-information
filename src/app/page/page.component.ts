@@ -12,6 +12,7 @@ import { DataService } from '../data.service';
 })
 export class PageComponent {
   data$ = combineLatest([this.route.data, this.dataService.data$]).pipe(
+    tap((d) => console.log(d)),
     tap(([routeData, data]) => (this.dataService.currentFile = routeData.file)),
     map(
       ([routeData, data]) => data.find((d) => d.file === routeData.file)?.data

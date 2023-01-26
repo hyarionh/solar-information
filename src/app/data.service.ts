@@ -5,7 +5,7 @@ import { mdfiles } from './app.module';
 
 @Injectable()
 export class DataService {
-  public fileList = mdfiles;
+  public fileList = ['home', ...mdfiles];
   public data$ = new BehaviorSubject<{ file: string; data: any }[]>([]);
   public currentFile = '';
 

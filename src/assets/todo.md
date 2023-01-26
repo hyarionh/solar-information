@@ -4,40 +4,9 @@
 
 
 
-Electrical changes
-I'm not sure of the extend of the changes as the electrical side was done when we bought the house, but from what I understand a solar installer will do the following in the process:
-Split your DB into 2 DBs
-Old DB = non-essentials and high-power items. e.g. geyser, kettle, stove
-New DB = essentials (basically everything that will run on battery). In our case this is every light breaker and at least 1 plug point per room.
-As part of the inverter installation there will be additional stuff such as fuse for battery, breakers for solar panels, inverter, etc, and changeovers for things like if you need to bypass the inverter.
 
-Batteries
-Hardware cost: R24,000+
-Installation cost: usually bundled in with inverter installation
-Lifespan: 2-10+ years
 
-There's a wide range of battery brands and types.
 
-The different battery types typically used:
-Lead Acid or AGM. Lifespan < 2 years. Lead acid will leak hydrogen when charging, so needs to be ventilated. AGM is sealed, so can be installed anywhere.
-https://www.solar-shop.co.za/45-lead-acid
-Lithium-ion. Lifespan 5-8 years (typically). These are larger battery banks with advanced electronics to protect the battery. They can normally do 3,000+ cycles (cycle = drain and recharge). They should not be drained below 50% or lifespan drops drastically (like down to 300 cycles). They are also limited in how much power they can output at once. e.g. a 2kWh battery can only supply 1kW of power at a time to devices.
-https://www.solar-shop.co.za/73-pylontech
-LifePO4 (Lithium-Iron-Phosphate). Lifespan 10+ years. These look similar to Lithium-ion, are often just called "Lithium" but are newer and better. They do 6,000+ cycles if you drain down to 80%. They will still do 3,000+ cycles if you drain to 0% (completely flat). They also can supply the full power rating. So a 2kWh can supply 2kW of power at a time.
-https://www.solar-shop.co.za/109-shoto
-https://www.solar-shop.co.za/111-hubble
-
-Batteries can all get very complicated, but pretty much it boils down to the following tips:
-Battery voltages must match the inverter voltage. Small inverters (particularly the off-grid/axpert ones) will sometimes be 12V or 24V. Most 5kW+ inverters will use 48V. LeadAcid/AGM/some Lithium batteries come in 12V. If you need 24V you connect 2 batteries in series. If you need 48V you need 4 in series. The bigger batteries will come in 48V normally.
-LifePO4 is the best solution for a solar home. Will last the longest, supply the most and lands up cheaper than all other ones when you factor in all the maths.
-Adding batteries means it costs you the same or more than sticking with Eskom. Add batteries to survive loadshedding or to go completely off-grid. Don't do it for financial reasons.
-The less often a battery cycles, the longer it will last. So even a Lead-acid could last 5 years if it's not cycled daily. A LifePO4 that is only cycled during loadshedding could potentially last 20 years or more.
-
-My personal recommendation is to only look at LifePO4 batteries, and NOT to get Pylontech brand. Pylontech is a very good brand, very respected and pushed by most installers but they are no longer competitive with the newer LifePO4 lithium batteries.
-
-First, there are multiple "Lithium" types of batteries. The pylontechs use a different lithium chemistry to the LifePO4 ones. LifePO4 has the following pros that pylontech cannot match:
-Can discharge to 0%. Pylontech will void your warranty if you do this. In fact they will void warranty if you discharge below 50%. LifePO4 will have reduced lifespan at 0%, but you will still get 3,000 cycles out of it (about 8 years).
-Can discharge at 1C. This means a 4.8kWh lifePO4 battery can discharge 4,800W in an hour with no issues. Pylontech can only discharge at 0.5C. So a 4.8kW pylontech can only provide up to 2,400W of power. Meaning you need 2 of them for a 4.8kW inverter. Also, if you force it to discharge higher than 0.5C you void the warranty.
 
 Feeding back into Eskom/CoCT
 Currently this is not worthwhile at all. In other countries this works very well, you feed back extra solar during the day to the power company at a reduced rate and at night you pay for getting power back from them.

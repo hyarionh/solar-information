@@ -142,3 +142,14 @@ For an off-grid/axpert inverter, ONLY the essential load is powered by solar and
 A grid-tie inverter does not have an essential load, it puts as much power as it can into the entire house. If your house uses 12kW at 11am and the grid-tie only has 3kW of solar, then 3kW gets used from solar and the remaining 9kW comes from Eskom.
 
 A hybrid inverter has an essential load which you connect to everything you want to run off battery. So you put your computers, tv, lights, etc. on the essential side and washing machines, kettles, geyser stay on the normal house power. When eskom is up, the hybrid inverter pushes as much solar as possible into the whole house. When eskom is offline, it disconnects the solar from the house and connects it to the essential side. The essential side then gets battery + solar power.
+
+## Electrical changes
+
+Your Solar Installer's electrician will typically do the following in the process:
+
+- Split your DB into 2 DBs
+- Old DB = non-essentials and high-power items. e.g. geyser, kettle, stove
+- New DB = essentials (basically everything that will run on battery). In our case this is every light breaker and at least 1 plug point per room.
+
+As part of the inverter installation there will be additional stuff such as fuse for battery, breakers for solar panels, inverter, etc, and changeovers for things like if you need to bypass the inverter.
+
