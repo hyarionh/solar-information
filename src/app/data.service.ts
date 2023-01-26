@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { mdfiles } from './app.module';
 
 @Injectable()
 export class DataService {
-  private fileList = ['backup-options', 'batteries', 'home'];
+  public fileList = mdfiles;
   public data$ = new BehaviorSubject<{ file: string; data: any }[]>([]);
   public currentFile = '';
 

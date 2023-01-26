@@ -9,13 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MarkdownModule } from 'ngx-markdown';
 import { DataService } from './data.service';
 
-export const mdfiles = [
-  'backup-options',
-  'batteries',
-  'inverters',
-  'solarpanels',
-  'finance',
-];
+export const mdfiles = ['backup-options', 'financing', 'hardware'];
 
 const routes: Routes = [
   {
