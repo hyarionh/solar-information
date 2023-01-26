@@ -1,5 +1,6 @@
 import { Component, VERSION } from '@angular/core';
 import { mdfiles } from './app.module';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'my-app',
@@ -20,4 +21,11 @@ export class AppComponent {
       }
     }),
   ];
+
+  constructor(private dataService: DataService) {}
+
+  onReload() {
+    // this.dataService.loadAllFiles();
+    this.dataService.reloadCurrentFile();
+  }
 }

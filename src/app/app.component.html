@@ -1,5 +1,6 @@
 <div class="menu">
   <a *ngFor="let path of paths" [routerLink]="path.url">{{ path.name }}</a>
+  <button type="button" (click)="onReload()">Reload</button>
 </div>
 
 <router-outlet></router-outlet>

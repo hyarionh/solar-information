@@ -6,7 +6,7 @@ There is a huge variety of combinations and options, below is a general overview
 
 **Cost**: R600~R1,500  
 **Recommended brand**: Gizzu  
-**Pro**: Very inexpensive  
+**Pro**: <span style="color: green">Very inexpensive </span>
 **Con**: Only runs wifi/internet.
 
 This is the cheapest option. Typically a single device about the size of your wifi router which has a battery. It will keep your wifi and fibre going during loadshedding, but not much else. Most include usb ports for charging phones.

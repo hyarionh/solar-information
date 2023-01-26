@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, SecurityContext } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
@@ -8,7 +8,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { MarkdownModule } from 'ngx-markdown';
 import { DataService } from './data.service';
-import { BackupOptionsComponent } from './page/backup-options.component';
 
 export const mdfiles = [
   'backup-options',
@@ -26,13 +25,6 @@ const routes: Routes = [
       file: 'home',
     },
   },
-  // {
-  //   path: 'backup-options',
-  //   component: BackupOptionsComponent,
-  //   data: {
-  //     file: 'home',
-  //   },
-  // },
   ...mdfiles.map((f) => ({
     path: f,
     component: PageComponent,
@@ -43,13 +35,16 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, PageComponent, BackupOptionsComponent],
+  declarations: [AppComponent, PageComponent],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
-    MarkdownModule.forRoot({ loader: HttpClient }),
+    MarkdownModule.forRoot({
+      loader: HttpClient,
+      sanitize: SecurityContext.NONE,
+    }),
   ],
 
   bootstrap: [AppComponent],

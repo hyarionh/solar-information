@@ -1,19 +1,32 @@
 import { Component, VERSION } from '@angular/core';
 import { ActivatedRoute, Route } from '@angular/router';
-import { map } from 'rxjs';
+import { MarkdownService } from 'ngx-markdown';
+import { combineLatest, map, tap, debounceTime } from 'rxjs';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-page',
   template: `
-  <markdown [src]="sourceFile$ | async" [srcRelativeLink]="true"></markdown>
+  <markdown [data]="data$ | async"></markdown>
   `,
 })
 export class PageComponent {
-  sourceFile$ = this.route.data.pipe(
-    map((data) => {
-      return `assets/${data['file']}.md`;
-    })
+  data$ = combineLatest([this.route.data, this.dataService.data$]).pipe(
+    tap(([routeData, data]) => (this.dataService.currentFile = routeData.file)),
+    map(
+      ([routeData, data]) => data.find((d) => d.file === routeData.file)?.data
+    )
+    // tap((d) => {
+    //   console.log(d, this.dataService.data$.value);
+    //   setTimeout(() => {
+    //     this.markdownService.reload();
+    //   });
+    // })
   );
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private dataService: DataService,
+    private markdownService: MarkdownService
+  ) {}
 }
